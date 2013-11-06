@@ -381,7 +381,6 @@ function unzoom () {
     .start()
 }
 $(window).keydown(function(e){
-console.log(e.keyCode)
   if (e.keyCode == 32) { // SPACE
     if (zooming) return;
     if (zoomed) unzoom();
