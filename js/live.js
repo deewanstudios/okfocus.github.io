@@ -1989,6 +1989,51 @@ function spin (cube) {
     })
     .start()
 }
+var zoomed = false, zooming = false;
+function zoom () {
+  zoomed = true;
+  zooming = true;
+  var from = {}
+  var trans = {};
+  from[ MX.perspectiveProp ] = scene.perspective;
+  trans[ MX.perspectiveProp ] = 1280;
+  new TWEEN.Tween(from)
+    .to(trans, 500)
+    .easing(TWEEN.Easing.Quadratic.Out)
+    .onUpdate(function(){
+      scene.el.style[MX.perspectiveProp] = from[MX.perspectiveProp] + "px"
+    })
+    .onComplete(function(){
+      zooming = false;
+    })
+    .start()
+}
+function unzoom () {
+  zoomed = false;
+  zooming = true;
+  var from = {}
+  var trans = {};
+  from[ MX.perspectiveProp ] = 1280;
+  trans[ MX.perspectiveProp ] = scene.perspective;
+  new TWEEN.Tween(from)
+    .to(trans, 500)
+    .easing(TWEEN.Easing.Quadratic.Out)
+    .onUpdate(function(){
+      scene.el.style[MX.perspectiveProp] = from[MX.perspectiveProp] + "px"
+    })
+    .onComplete(function(){
+      zooming = false;
+    })
+    .start()
+}
+$(window).keydown(function(e){
+console.log(e.keyCode)
+  if (e.keyCode == 32) { // SPACE
+    if (zooming) return;
+    if (zoomed) unzoom();
+    else zoom();
+  }
+})
 
 function log () {
   var str = '',
