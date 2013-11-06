@@ -53,12 +53,19 @@ var cubes = {
 //       'windows20000.jpg',
 //       'windows20002.jpg'
 
-      'officebg0004.png',
-      'officebg0005.png',
-      'officebg0001.png',
-      'officebg0003.png',
-      'officebg0000.png',
-      'officebg0002.png',
+//      'officebg0004.png',
+//      'officebg0005.png',
+//      'officebg0001.png',
+//      'officebg0003.png',
+//      'officebg0000.png',
+//      'officebg0002.png',
+
+      'office4.png',
+      'office5.png',
+      'office1.png',
+      'office3.png',
+      'office0.png',
+      'office2.png',
 
     ],
     textTexture: [
