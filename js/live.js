@@ -1771,7 +1771,7 @@ function init () {
     scene.height = window.innerHeight
   }
   bind()
-  if (mobile) {
+  if (mobile || $.browser.mozilla) {
     load('mobile')
   }
   else {
@@ -1795,7 +1795,7 @@ function load (name) {
     skybox.removeElement();
   }
 
-  if (mobile) {
+  if (mobile || $.browser.mozilla) {
     skybox = new MX.TexturedBox({
       width: side,
       height: side,
@@ -1917,7 +1917,7 @@ function bind_desktop () {
 function animate () {
   requestAnimationFrame(animate)
   TWEEN.update()
-  if (! mobile) {
+  if (! (mobile || $.browser.mozilla) ) {
     textbox.rotationY += MX.toRad(1/60);
     textbox2.rotationY -= MX.toRad(1/60);
   }
@@ -2011,4 +2011,30 @@ window.addEventListener("load",function() {
 }, false);
 */
 
+$.browser = (function( ua ) {
+  ua = ua.toLowerCase();
+  var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+    /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+    /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+    /(msie) ([\w.]+)/.exec( ua ) ||
+    ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+    [];
+  var matched = {
+    browser: match[ 1 ] || "",
+    version: match[ 2 ] || "0"
+  };
+  browser = {};
+  if ( matched.browser ) {
+      browser[ matched.browser ] = true;
+      browser.version = matched.version;
+  }
+  // Chrome is Webkit, but Webkit is also Safari.
+  if ( browser.chrome ) {
+    browser.webkit = true;
+  } else if ( browser.webkit ) {
+    browser.safari = true;
+  }
+  $.browser = browser;
+  return browser;
+})( navigator.userAgent );
 
