@@ -4,9 +4,9 @@
 
 Setup:
 
+1. `git clone git@github.com:okfocus/okfocus.github.io.git && cd okfocus.github.io`
 1. `npm install -g bower`
 1. `npm install -g grunt-cli`
-1. `git clone git@github.com:okfocus/okfocus.github.io.git && cd okfocus.github.io`
 1. `npm install && bower install` 
 
 To concat and minify:
