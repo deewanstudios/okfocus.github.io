@@ -6,3 +6,10 @@ v1
 .#*
 *.swp
 
+node_modules
+
+jquery
+nodoubletapzoom
+spin.js
+tweenjs
+live.concat.js
