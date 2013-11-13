@@ -36,9 +36,7 @@ OKFocus, Bonafide Internet Legends ©2013
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-
 		<link rel="shortcut icon" href="http://okfoc.us/assets/images/favicon.ico"/>
-		<link rel="image_src" href="http://okfoc.us/assets/images/ok_icon.png"/>
 		<link rel="image_src" href="http://okfoc.us/assets/images/ok_icon.png"/>
 		<link rel="stylesheet" href="css/app.css?1">
 		<script src="js/live.min.js"></script>
@@ -47,13 +45,22 @@ OKFocus, Bonafide Internet Legends ©2013
 				init()
 				window.scrollTo(0,0)
 			}, false);
+			$(function(){
+			    $('.top.left.nav a').okhover({
+			        fadeIn: true,
+			        fadeOut: true,
+			        fadeInDuration: 200,
+			        el: 'backgroundz' 
+			    });  
+			});
 		</script>
 	</head>
 	<body>
 		<div id="pano-rapper">
+			<div id="backgroundz"></div>
 			<span class="top left nav">
 				<b>Recent Work</b>
-				<a target="_blank" href="http://1948london.com" data="Built and designed website for Nike event promoting hyperfeel, custom 360˚ pano and registration system.">Nike, Feel London <date>10/13</date></a>
+				<a target="_blank" data-okimage="http://mijncdlijst.files.wordpress.com/2009/12/yello.jpg" href="http://1948london.com" data="Built and designed website for Nike event promoting hyperfeel, custom 360˚ pano and registration system.">Nike, Feel London <date>10/13</date></a>
 				<a target="_blank" href="https://itunes.apple.com/ca/app/been-trill-soundboard/id701107269?mt=8" data="Cool iOS soundboard app using sweet 3d stuff.">#BEENTRILL# App <date>10/13</date></a>
 				<a target="_blank" href="http://paddleson2.tumblr.com/" data="Designed / developed Phillips Paddles On Identity and website where users submit their work through Tumblr to be considered for the auction.">Phillips, Paddles On <date>9/13</date></a>
 				<a target="_blank" href="http://newmoticons.com/" data="Cool emoticon generator we made in house for fun. ">Newmoticons <date>8/13</date></a>

@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 				src: [
 					'js/vendor/jquery/jquery.js',
 					'js/vendor/loader.js',
+					'js/vendor/okhover.min.js',
 					'js/vendor/tweenjs/Tween.js',
 					'js/vendor/nodoubletapzoom/jquery.nodoubletapzoom.js',
 					'js/vendor/tweenjs/src/Tween.js',
