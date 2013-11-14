@@ -448,3 +448,11 @@ $.browser = (function( ua ) {
   return browser;
 })( navigator.userAgent );
 
+$(function(){
+  $('.top.left.nav a').okhover({
+    fadeIn: true,
+    fadeOut: true,
+    fadeInDuration: 200,
+    el: '#backgroundz'
+  });
+});
