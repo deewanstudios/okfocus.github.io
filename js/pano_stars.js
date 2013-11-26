@@ -14,6 +14,8 @@ var index = 0;
 var order = "panotest3cubic".split(" ")
 var url_prefix = 'https://s3.amazonaws.com/okfocus/pano/office/'
 // if (mobile) url_prefix += '';
+var box1_speed = 7/720   / 10
+var box2_speed = -11/720 / 4
 var cubes = {
   'panotest3cubic': {
     title: "OKFocus",
@@ -220,8 +222,8 @@ function bind_desktop () {
 function animate () {
   requestAnimationFrame(animate)
   TWEEN.update()
-  textbox.rotationY += MX.toRad(7/60);
-  textbox2.rotationY += MX.toRad(11/60);
+  textbox.rotationY += MX.toRad(box1_speed);
+  textbox2.rotationY += MX.toRad(box2_speed);
 
   controls.update()
   scene.update()
@@ -281,6 +283,51 @@ function spin (cube) {
     })
     .start()
 }
+
+var zoomed = false, zooming = false, zoom_perspective = 300;
+function zoom () {
+  zoomed = true;
+  zooming = true;
+  var from = {}
+  var trans = {};
+  from[ MX.perspectiveProp ] = scene.perspective;
+  trans[ MX.perspectiveProp ] = zoom_perspective;
+  new TWEEN.Tween(from)
+    .to(trans, 500)
+    .easing(TWEEN.Easing.Quadratic.Out)
+    .onUpdate(function(){
+      scene.el.style[MX.perspectiveProp] = from[MX.perspectiveProp] + "px"
+    })
+    .onComplete(function(){
+      zooming = false;
+    })
+    .start()
+}
+function unzoom () {
+  zoomed = false;
+  zooming = true;
+  var from = {}
+  var trans = {};
+  from[ MX.perspectiveProp ] = zoom_perspective;
+  trans[ MX.perspectiveProp ] = scene.perspective;
+  new TWEEN.Tween(from)
+    .to(trans, 500)
+    .easing(TWEEN.Easing.Quadratic.Out)
+    .onUpdate(function(){
+      scene.el.style[MX.perspectiveProp] = from[MX.perspectiveProp] + "px"
+    })
+    .onComplete(function(){
+      zooming = false;
+    })
+    .start()
+}
+$(window).keydown(function(e){
+  if (e.keyCode == 32) { // SPACE
+    if (zooming) return;
+    if (zoomed) unzoom();
+    else zoom();
+  }
+})
 
 function log () {
   var str = '',
