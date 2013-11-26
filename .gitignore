@@ -9,14 +9,12 @@ v1
 node_modules
 
 live.concat.js
-tweenjs/assets/
-tweenjs/CONTRIBUTING.md
-tweenjs/LICENSE
-tweenjs/README.md
-tweenjs/build
-tweenjs/examples
-tweenjs/test
-tweenjs/utils
-spin.js/assets
-spin.js/dist
-spin.js/example
+jquery
+nodoubletapzoom
+spin.js
+tweenjs
+!js/vendor/jquery/jquery.js
+!js/vendor/jquery/jquery.min.js
+!js/vendor/nodoubletapzoom/jquery.nodoubletapzoom.js
+!js/vendor/spin.js/spin.js
+!js/vendor/tweenjs/src/Tween.js
