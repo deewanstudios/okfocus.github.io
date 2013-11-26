@@ -17,4 +17,4 @@ tweenjs
 !js/vendor/jquery/jquery.min.js
 !js/vendor/nodoubletapzoom/jquery.nodoubletapzoom.js
 !js/vendor/spin.js/spin.js
-!js/vendor/tweenjs/src/Tween.js
+@js/vendor/tweenjs/build/tween.min.js
