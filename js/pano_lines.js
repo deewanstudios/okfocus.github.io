@@ -283,7 +283,7 @@ function spin (cube) {
     .start()
 }
 
-var zoomed = false, zooming = false, zoom_perspective = 300;
+var zoomed = false, zooming = false, zoom_perspective = 1200;
 function zoom () {
   zoomed = true;
   zooming = true;

@@ -8,8 +8,15 @@ v1
 
 node_modules
 
-jquery
-nodoubletapzoom
-spin.js
-tweenjs
 live.concat.js
+tweenjs/assets/
+tweenjs/CONTRIBUTING.md
+tweenjs/LICENSE
+tweenjs/README.md
+tweenjs/build
+tweenjs/examples
+tweenjs/test
+tweenjs/utils
+spin.js/assets
+spin.js/dist
+spin.js/example
