@@ -7,6 +7,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+@font-face {
+  font-family: 'OKFocusRegular';
+  src: url('http://okfoc.us/assets/fonts/okfocus-regular-webfont.eot');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OKFocusRegular';
+  src: url('http://okfoc.us/assets/fonts/okfocus-regular-webfont.woff') format('woff'),
+  url('http://okfoc.us/assets/fonts/okfocus-regular-webfont.svg#okfocus-regular-webfont') format('svg');
+  font-weight: normal;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -16,6 +27,8 @@ html, body {
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #888;
+  background: black;
+  -webkit-transition: all 1.0s;
 }
 h1 {
   font-size: 22px;
@@ -58,29 +71,48 @@ h1 {
   z-index: 666;
   display: none;
 }
+#lightbulb {
+  font-family: OKFocusRegular;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 666;
+}
+.invert {
+  background-color: white;
+  -webkit-filter: invert(1.0);
+}
+.invert #lightbulb {
+  color: white;
+}
 </style>
-<script src="js/vendor/jquery/jquery.js"></script>
-<script src="js/vendor/nodoubletapzoom/jquery.nodoubletapzoom.js"></script>
-<script src="js/vendor/tweenjs/build/tween.min.js"></script>
-<script src="js/vendor/loader.js"></script>
-<script src="js/vendor/spin.js/spin.js"></script>
-<script src="js/mx/mx.js"></script>
-<script src="js/mx/mx.scene.js"></script>
-<script src="js/mx/mx.gyroRotationControl.js"></script>
-<script src="js/mx/mx.rotationControl.js"></script>
-<script src="js/mx/mx.texturedBox.js"></script>
-<script src="js/spinner.js"></script>
-<script src="js/pano_stars.js"></script>
+<script src="/js/vendor/jquery/jquery.js"></script>
+<script src="/js/vendor/nodoubletapzoom/jquery.nodoubletapzoom.js"></script>
+<script src="/js/vendor/tweenjs/build/tween.min.js"></script>
+<script src="/js/vendor/loader.js"></script>
+<script src="/js/vendor/spin.js/spin.js"></script>
+<script src="/js/mx/mx.js"></script>
+<script src="/js/mx/mx.scene.js"></script>
+<script src="/js/mx/mx.gyroRotationControl.js"></script>
+<script src="/js/mx/mx.rotationControl.js"></script>
+<script src="/js/mx/mx.texturedBox.js"></script>
+<script src="/js/spinner.js"></script>
+<script src="/js/pano_stars.js"></script>
 <script>
 window.addEventListener("load",function() {
   init()
   window.scrollTo(0,0)
+  $("#lightbulb").click(function(){ $('body').toggleClass("invert") })
 }, false);
 </script>
 </head>
-<body>
+<body class="invert">
 <div id="pano-rapper">
 <div id="log"></div>
 </div>
+<div id="lightbulb">i</div>
 </body>
 </html>

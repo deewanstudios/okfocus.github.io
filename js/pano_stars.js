@@ -46,21 +46,21 @@ var cubes = {
 //       'windows0000.jpg',
 //       'windows0002.jpg',
 
-      'windows20004.jpg',
-      'windows20005.jpg',
-      'windows20003.jpg',
-      'windows20001.jpg',
-      'windows20000.jpg',
-      'windows20002.jpg'
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
 
     ],
     textTexture: [
-      "img/dust750.gif",
-      "img/dust750.gif",
-      "img/dust750.gif",
-      "img/dust750.gif",
-      "img/dust750.gif",
-      "img/dust750.gif"
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
+      "http://okfoc.us/office/pano/img/dust750.gif",
     ],
     rotationX: 3,
     rotationY: -40,
@@ -102,7 +102,7 @@ function init () {
 function load (name) {
   cube = cubes[name]
   if (spinner) spinner.stop()
-  spinner = new Spinner(spinOpts).spin(scene.el);
+//   spinner = new Spinner(spinOpts).spin(scene.el);
   var overlap = 0 // mobile ? 1 : 3 // overlap 1px to eliminate seams
 //  var side = (mobile ? 1000 : 2000) - overlap;
   var side = 1000 - overlap;
