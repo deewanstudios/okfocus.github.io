@@ -149,6 +149,16 @@ a {
 	vertical-align:middle;
 }
 
+.nav.top.right a:hover:before{
+	content:open-quote attr(data) close-quote " → " ;
+	border-right:1px solid black;
+	padding-right:2px;
+	font-weight:normal;
+	font-size:12px;
+	vertical-align:middle;
+	font-style:italic;
+}
+
 span {
 	cursor:pointer;
 }
