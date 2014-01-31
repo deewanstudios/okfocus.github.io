@@ -57,7 +57,7 @@ var Loader = Loader || (function(){
   Loader.prototype.preloadImage = function(src){
     var _this = this;
     this.register(src);
-    var img = new Image();
+    var img = new Image();  
     img.onload = function(){
       _this.ready(src);
     }

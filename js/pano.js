@@ -449,7 +449,7 @@ $.browser = (function( ua ) {
 })( navigator.userAgent );
 
 $(function(){
-  $('.top.left.nav a').okhover({
+  $('.top.nav a').okhover({
     fadeIn: true,
     fadeOut: true,
     fadeInDuration: 200,
