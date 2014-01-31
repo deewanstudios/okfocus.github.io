@@ -56,12 +56,12 @@ var cubes = {
       "http://okfoc.us/office/pano/img/dust750.gif",
     ],
     textTexture: [
-      "http://asdf.us/grid/grid6b.html#nogui",
-      "http://asdf.us/grid/grid6b.html#nogui",
-      "http://asdf.us/grid/grid6b.html#nogui",
-      "http://asdf.us/grid/grid6b.html#nogui",
-      "http://asdf.us/grid/grid6b.html#nogui",
-      "http://asdf.us/grid/grid6b.html#nogui"
+      "http://csh.bz/canvas/01/27.html",
+      "http://csh.bz/canvas/01/27.html",
+      "http://csh.bz/canvas/01/27.html",
+      "http://csh.bz/canvas/01/27.html",
+      "http://csh.bz/canvas/01/27.html",
+      "http://csh.bz/canvas/01/27.html"
     ],
     rotationX: 3,
     rotationY: -40,
@@ -115,7 +115,7 @@ function load (name) {
   }
   skybox = new MX.IframeBox({
     width: side,
-    height: side*2,
+    height: side,
     depth: side,
     classname: 'cubeface',
     texture: cube.texture,
@@ -139,7 +139,7 @@ function load (name) {
 
   textbox = new MX.IframeBox({
     width: textSide,
-    height: textSide/2,
+    height: textSide,
     depth: textSide,
     classname: 'cubeface',
     texture: cube.textTexture,

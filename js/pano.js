@@ -84,10 +84,10 @@ var cubes = {
 //      'officetextright0000.png',
 //      'officetextright0002.png'
 
-      'newtext0001.png',
-      'newtext0003.png',
-      'newtext0000.png',
-      'newtext0002.png'
+      'newtext-2014-0001.png',
+      'newtext-2014-0003.png',
+      'newtext-2014-0000.png',
+      'newtext-2014-0002.png'
     ],
     rotationX: 3,
     rotationY: -40,
