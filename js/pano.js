@@ -79,15 +79,17 @@ var cubes = {
     text2Texture: [
       'blank.png',
       'blank.png',
+      // use this order if you build the pano, then flip the faces
 //      'officetextright0001.png',
 //      'officetextright0003.png',
 //      'officetextright0000.png',
 //      'officetextright0002.png'
 
-      'newtext-2014-0001.png',
-      'newtext-2014-0003.png',
-      'newtext-2014-0000.png',
-      'newtext-2014-0002.png'
+      // use this order if you flip the pano, then build the faces
+      'newtext-2014b0003.png',
+      'newtext-2014b0001.png',
+      'newtext-2014b0000.png',
+      'newtext-2014b0002.png',
     ],
     rotationX: 3,
     rotationY: -40,

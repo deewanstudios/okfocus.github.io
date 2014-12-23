@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-				banner: '/* okfocus 2013 internet legends ~ https://github.com/okfocus/okfocus.github.io */\n'
+				banner: '/* okfocus 2015 internet legends ~ https://github.com/okfocus/okfocus.github.io */\n'
 			},
 			build: {
 				src: 'js/live.concat.js',
